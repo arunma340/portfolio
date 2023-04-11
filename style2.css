@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+nav{
+    display: flex;
+    width: 85%;
+     margin-left: 100px; 
+     justify-content: space-between; 
+    align-items: center;
+}
+/* descendant slection is used here . sapce after nav is compulsory*/
+
+nav .logo{
+    width: 140px;
+}
+nav ul li{
+    /* during inline we want margin also inline block is used instead of using inline so spacing automatically comes */
+    display: inline-block;
+    /* marin 1st top margin ,right,bottom,left */
+    /* if top bottom same value and rightleft same value we can pass 2 value  */
+     margin:10px 20px ; 
+}
+nav ul li a{
+    /* for   removing existing underline */
+    text-decoration: none;
+    font-weight: bold;
+    color:black ;
+}
+/* pseudo class  eg:when we click a link it property will change according to style */
+/* syntax: selector:psedo-class{property:value;} */
+nav ul li a:hover{
+    color: aqua;
+}
+.tittle{
+    margin-left: 8%;
+    margin-top: 13%;
+
+}
+.tittle h1{
+   font-size: 50px;
+   color: black;
+   margin-bottom: 20px;
+}
+.tittle span{
+    color: orangered;
+}
+.tittle p{
+    line-height: 20px;
+}
+.tittle a{
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top:20px ;
+    font-weight: bold;
+
+}   
+/* position absolute is used to fix the image one above the other */
+.images{
+    position: absolute;
+    width: 45%;
+    height: 80%;
+    bottom: 0;
+    right: 30px;
+}
+.images img{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: bottom 1s,left 1s;
+}
+.images:hover .shape{
+    bottom: 70px;
+}
+.images:hover .girl{
+    left: 40%;
+}
